@@ -46,7 +46,14 @@ tar zxf /tmp/code-server-${CODE_SERVER_VERSION}-linux-amd64.tar.gz --strip-compo
   --install-extension goessner.mdmath \
   --install-extension coenraads.bracket-pair-colorizer-2 \
   --install-extension editorconfig.editorconfig \
-  --install-extension streetsidesoftware.code-spell-checker
+  --install-extension streetsidesoftware.code-spell-checker \
+  --install-extension octref.vetur \
+  --install-extension formulahendry.auto-close-tag \
+  --install-extension formulahendry.auto-rename-tag \
+  --install-extension xabikos.JavaScriptSnippets \
+  --install-extension christian-kohler.path-intellisense \
+  --install-extension ecmel.vscode-html-css \
+  --install-extension HookyQR.beautify
 
 echo "INFO: all extensions install finished."
 
