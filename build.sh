@@ -71,7 +71,7 @@ ls -lh /usr/local/code-server-users/User
 
 if [[ ${VERSION} != "" ]]; then
   #output
-  FINAL_NAME=code-server-v${CODE_SERVER_VERSION}-extensions-${VERSION}
+  FINAL_NAME=code-server-v${CODE_SERVER_VERSION}-develop-extensions-${VERSION}
   TARGET_DIR=$GITHUB_WORKSPACE/target
   OUTPUT_DIR=${TARGET_DIR}/${FINAL_NAME}
   mkdir -p ${OUTPUT_DIR}
