@@ -53,7 +53,9 @@ tar zxf /tmp/code-server-${CODE_SERVER_VERSION}-linux-amd64.tar.gz --strip-compo
   --install-extension xabikos.JavaScriptSnippets \
   --install-extension christian-kohler.path-intellisense \
   --install-extension ecmel.vscode-html-css \
-  --install-extension HookyQR.beautify
+  --install-extension HookyQR.beautify \
+  --install-extension GabrielBB.vscode-lombok \
+  --install-extension Pivotal.vscode-boot-dev-pack
 
 echo "INFO: all extensions install finished."
 
