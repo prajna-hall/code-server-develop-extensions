@@ -30,6 +30,6 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
-        files: target/code-server-v${{ env.code_server_version }}-extensions-${{ steps.get_version.outputs.VERSION }}.tar.gz
+        files: target/code-server-v${{ env.code_server_version }}-develop-extensions-${{ steps.get_version.outputs.VERSION }}.tar.gz
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
