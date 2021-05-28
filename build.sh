@@ -25,9 +25,13 @@ mkdir -p /tmp
 wget -P /tmp "https://github.com/cdr/code-server/releases/download/v${CODE_SERVER_VERSION}/code-server-${CODE_SERVER_VERSION}-linux-amd64.tar.gz"
 tar zxf /tmp/code-server-${CODE_SERVER_VERSION}-linux-amd64.tar.gz --strip-components 1 -C /usr/local/code-server
 
-curl "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/cwan/vsextensions/native-ascii-converter/1.0.9/vspackage" -o /tmp/cwan.native-ascii-converter-1.0.9.vsix
+wget -P /tmp "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/cwan/vsextensions/native-ascii-converter/1.0.9/vspackage"
 
-ls -l /tmp
+ls -lh /tmp
+
+mv /tmp/vspackage /tmp/cwan.native-ascii-converter-1.0.9.vsix
+
+ls -lh /tmp
 
 /usr/local/code-server/bin/code-server \
   --extensions-dir /usr/local/code-server-extensions \
