@@ -28,7 +28,8 @@ tar zxf /tmp/code-server-${CODE_SERVER_VERSION}-linux-amd64.tar.gz --strip-compo
 /usr/local/code-server/bin/code-server \
   --extensions-dir /usr/local/code-server-extensions \
   --user-data-dir /usr/local/code-server-users \
-  --enable-proposed-api cwan.native-ascii-converter@1.0.9\
+  --enable-proposed-api cwan.native-ascii-converter \
+  --install-extension cwan.native-ascii-converter \
   --force
 
 echo "INFO: all extensions install finished."
