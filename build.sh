@@ -55,7 +55,11 @@ tar zxf /tmp/code-server-${CODE_SERVER_VERSION}-linux-amd64.tar.gz --strip-compo
   --install-extension ecmel.vscode-html-css \
   --install-extension HookyQR.beautify \
   --install-extension GabrielBB.vscode-lombok \
-  --install-extension Pivotal.vscode-boot-dev-pack
+  --install-extension Pivotal.vscode-boot-dev-pack \
+  --install-extension OBKoro1.korofileheader \
+  --install-extension cwan.native-ascii-converter \
+  --install-extension hediet.vscode-drawio
+  
 
 echo "INFO: all extensions install finished."
 
