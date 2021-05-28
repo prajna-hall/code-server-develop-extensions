@@ -35,6 +35,10 @@ nohup /usr/local/code-server/bin/code-server \
 # 等待3秒,保证启动完毕
 sleep 3
 
+echo "----------------"
+
+ps -ef | grep code-server
+
 # native-ascii-converter插件直接通过名称安装出现找不到的错误,因此手动下载,通过指定vsix安装
 curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/cwan/vsextensions/native-ascii-converter/1.0.9/vspackage | gunzip > /tmp/native-ascii-converter-1.0.9.vsix
 
