@@ -25,6 +25,10 @@ mkdir -p /tmp
 wget -P /tmp "https://github.com/cdr/code-server/releases/download/v${CODE_SERVER_VERSION}/code-server-${CODE_SERVER_VERSION}-linux-amd64.tar.gz"
 tar zxf /tmp/code-server-${CODE_SERVER_VERSION}-linux-amd64.tar.gz --strip-components 1 -C /usr/local/code-server
 
+# 该插件直接通过名称安装出现找不到的错误,因此手动下载,通过vsix安装
+
+curl https://marketplace.visualstudio.com/_apis/public/gallery/publishers/cwan/vsextensions/native-ascii-converter/1.0.9/vspackage | gunzip > /tmp/native-ascii-converter-1.0.9.vsix
+
 /usr/local/code-server/bin/code-server \
   --extensions-dir /usr/local/code-server-extensions \
   --user-data-dir /usr/local/code-server-users \
@@ -58,7 +62,7 @@ tar zxf /tmp/code-server-${CODE_SERVER_VERSION}-linux-amd64.tar.gz --strip-compo
   --install-extension Pivotal.vscode-boot-dev-pack \
   --install-extension OBKoro1.korofileheader \
   --install-extension hediet.vscode-drawio \
-  --install-extension ${GITHUB_WORKSPACE}/cwan.native-ascii-converter-1.0.9.vsix
+  --install-extension /tmp/native-ascii-converter-1.0.9.vsix
 
 echo "INFO: all extensions install finished."
 
