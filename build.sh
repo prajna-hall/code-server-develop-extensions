@@ -28,6 +28,36 @@ tar zxf /tmp/code-server-${CODE_SERVER_VERSION}-linux-amd64.tar.gz --strip-compo
 /usr/local/code-server/bin/code-server \
   --extensions-dir /usr/local/code-server-extensions \
   --user-data-dir /usr/local/code-server-users \
+  --install-extension MS-CEINTL.vscode-language-pack-zh-hans \
+  --install-extension k--kato.intellij-idea-keybindings \
+  --install-extension ahmadawais.shades-of-purple \
+  --install-extension pkief.material-icon-theme \
+  --install-extension eamodio.gitlens \
+  --install-extension donjayamanne.python-extension-pack \
+  --install-extension vscjava.vscode-java-pack \
+  --install-extension SonarSource.sonarlint-vscode \
+  --install-extension redhat.vscode-xml \
+  --install-extension redhat.vscode-yaml \
+  --install-extension bungcip.better-toml \
+  --install-extension scala-lang.scala \
+  --install-extension scalameta.metals \
+  --install-extension aaron-bond.better-comments \
+  --install-extension yzhang.markdown-all-in-one \
+  --install-extension goessner.mdmath \
+  --install-extension coenraads.bracket-pair-colorizer-2 \
+  --install-extension editorconfig.editorconfig \
+  --install-extension streetsidesoftware.code-spell-checker \
+  --install-extension octref.vetur \
+  --install-extension formulahendry.auto-close-tag \
+  --install-extension formulahendry.auto-rename-tag \
+  --install-extension xabikos.JavaScriptSnippets \
+  --install-extension christian-kohler.path-intellisense \
+  --install-extension ecmel.vscode-html-css \
+  --install-extension HookyQR.beautify \
+  --install-extension GabrielBB.vscode-lombok \
+  --install-extension Pivotal.vscode-boot-dev-pack \
+  --install-extension OBKoro1.korofileheader \
+  --install-extension hediet.vscode-drawio \
   --install-extension ${GITHUB_WORKSPACE}/cwan.native-ascii-converter-1.0.9.vsix
 
 echo "INFO: all extensions install finished."
