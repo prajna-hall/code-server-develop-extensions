@@ -31,13 +31,10 @@ nohup /usr/local/code-server/bin/code-server \
   --user-data-dir /usr/local/code-server-users \
   --bind-addr 0.0.0.0:8081 \
   --auth none > /dev/null 2>&1 &
-
 # 等待3秒,保证启动完毕
 sleep 3
-
-echo "----------------"
-
-ps -ef | grep code-server
+# 仅仅启动也没用,需要模拟一次访问,此时code-server才会在user-data-dir中生成运行时文件,后续安装语言包才能生成languagepacks.json文件
+curl http://localhost:8081 > /dev/null
 
 # native-ascii-converter插件直接通过名称安装出现找不到的错误,因此手动下载,通过指定vsix安装
 curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/cwan/vsextensions/native-ascii-converter/1.0.9/vspackage | gunzip > /tmp/native-ascii-converter-1.0.9.vsix
