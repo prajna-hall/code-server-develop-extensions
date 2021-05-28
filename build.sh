@@ -25,8 +25,17 @@ mkdir -p /tmp
 wget -P /tmp "https://github.com/cdr/code-server/releases/download/v${CODE_SERVER_VERSION}/code-server-${CODE_SERVER_VERSION}-linux-amd64.tar.gz"
 tar zxf /tmp/code-server-${CODE_SERVER_VERSION}-linux-amd64.tar.gz --strip-components 1 -C /usr/local/code-server
 
-# 该插件直接通过名称安装出现找不到的错误,因此手动下载,通过vsix安装
+# 下载前启动code-server服务,否则语言包的languagepacks.json文件无法下载
+nohup /usr/local/code-server/bin/code-server \
+  --extensions-dir /usr/local/code-server-extensions \
+  --user-data-dir /usr/local/code-server-users \
+  --bind-addr 0.0.0.0:8081 \
+  --auth none > /dev/null 2>&1 &
 
+# 等待3秒,保证启动完毕
+sleep 3
+
+# native-ascii-converter插件直接通过名称安装出现找不到的错误,因此手动下载,通过指定vsix安装
 curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/cwan/vsextensions/native-ascii-converter/1.0.9/vspackage | gunzip > /tmp/native-ascii-converter-1.0.9.vsix
 
 /usr/local/code-server/bin/code-server \
@@ -77,6 +86,8 @@ ls -lh /usr/local/code-server-users
 echo "INFO: ls -lh /usr/local/code-server-users/User"
 ls -lh /usr/local/code-server-users/User
 
+# 停止code-server服务
+ps -ef | grep code-server | grep 8081 | awk '{print $2}' | xargs kill > /dev/null 2>&1 || echo '0'
 
 if [[ ${VERSION} != "" ]]; then
   #output
