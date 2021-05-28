@@ -82,7 +82,6 @@ if [[ ${VERSION} != "" ]]; then
   mkdir -p ${OUTPUT_DIR}
 
   #copy assest
-  /bin/cp -rf /usr/local/code-server-users/languagepacks.json ${OUTPUT_DIR}/
   /bin/cp -rf /usr/local/code-server-extensions ${OUTPUT_DIR}/
 
   #build tarball
