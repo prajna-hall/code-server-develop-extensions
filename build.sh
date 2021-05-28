@@ -27,7 +27,7 @@ tar zxf /tmp/code-server-${CODE_SERVER_VERSION}-linux-amd64.tar.gz --strip-compo
 
 # 该插件直接通过名称安装出现找不到的错误,因此手动下载,通过vsix安装
 
-curl https://marketplace.visualstudio.com/_apis/public/gallery/publishers/cwan/vsextensions/native-ascii-converter/1.0.9/vspackage | gunzip > /tmp/native-ascii-converter-1.0.9.vsix
+curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/cwan/vsextensions/native-ascii-converter/1.0.9/vspackage | gunzip > /tmp/native-ascii-converter-1.0.9.vsix
 
 /usr/local/code-server/bin/code-server \
   --extensions-dir /usr/local/code-server-extensions \
