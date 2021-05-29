@@ -45,6 +45,7 @@ curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/
   --install-extension MS-CEINTL.vscode-language-pack-zh-hans \
   --install-extension k--kato.intellij-idea-keybindings \
   --install-extension ahmadawais.shades-of-purple \
+  --install-extension GitHub.github-vscode-theme \
   --install-extension pkief.material-icon-theme \
   --install-extension eamodio.gitlens \
   --install-extension donjayamanne.python-extension-pack \
@@ -61,7 +62,7 @@ curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/
   --install-extension coenraads.bracket-pair-colorizer-2 \
   --install-extension editorconfig.editorconfig \
   --install-extension streetsidesoftware.code-spell-checker \
-  --install-extension octref.vetur \
+  --install-extension mubaidr.vuejs-extension-pack \
   --install-extension formulahendry.auto-close-tag \
   --install-extension formulahendry.auto-rename-tag \
   --install-extension xabikos.JavaScriptSnippets \
@@ -72,6 +73,11 @@ curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/
   --install-extension Pivotal.vscode-boot-dev-pack \
   --install-extension OBKoro1.korofileheader \
   --install-extension hediet.vscode-drawio \
+  --install-extension dbaeumer.vscode-eslint \
+  --install-extension ms-azuretools.vscode-docker \
+  --install-extension ms-ossdata.vscode-postgresql \
+  --install-extension samuelcolvin.jinjahtml \
+  --install-extension cymonk.sql-formatter \
   --install-extension /tmp/native-ascii-converter-1.0.9.vsix
 
 echo "INFO: all extensions install finished."
