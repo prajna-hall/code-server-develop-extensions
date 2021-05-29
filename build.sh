@@ -75,7 +75,6 @@ curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/
   --install-extension hediet.vscode-drawio \
   --install-extension dbaeumer.vscode-eslint \
   --install-extension ms-azuretools.vscode-docker \
-  --install-extension ms-ossdata.vscode-postgresql \
   --install-extension samuelcolvin.jinjahtml \
   --install-extension cymonk.sql-formatter \
   --install-extension /tmp/native-ascii-converter-1.0.9.vsix
