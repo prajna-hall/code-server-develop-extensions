@@ -42,7 +42,7 @@ curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/
 curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/mtxr/vsextensions/sqltools/0.23.0/vspackage | gunzip > /tmp/mtxr.sqltools-0.23.0.vsix
 curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/mtxr/vsextensions/sqltools-driver-pg/0.2.0/vspackage | gunzip > /tmp/mtxr.sqltools-driver-pg-0.2.0.vsix
 curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/zaaack/vsextensions/markdown-editor/0.1.7/vspackage | gunzip > /tmp/zaaack.markdown-editor-0.1.7.vsix
-
+curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/hediet/vsextensions/vscode-drawio/1.4.0/vspackage | gunzip > /tmp/hediet.vscode-drawio-1.4.0.vsix
 /usr/local/code-server/bin/code-server \
   --extensions-dir /usr/local/code-server-extensions \
   --user-data-dir /usr/local/code-server-users \
@@ -76,7 +76,6 @@ curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/
   --install-extension GabrielBB.vscode-lombok \
   --install-extension Pivotal.vscode-boot-dev-pack \
   --install-extension OBKoro1.korofileheader \
-  --install-extension hediet.vscode-drawio \
   --install-extension dbaeumer.vscode-eslint \
   --install-extension ms-azuretools.vscode-docker \
   --install-extension samuelcolvin.jinjahtml \
@@ -84,7 +83,8 @@ curl -J -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/
   --install-extension /tmp/adpyke.vscode-sql-formatter-1.4.4.vsix \
   --install-extension /tmp/mtxr.sqltools-0.23.0.vsix \
   --install-extension /tmp/mtxr.sqltools-driver-pg-0.2.0.vsix \
-  --install-extension /tmp/zaaack.markdown-editor-0.1.7.vsix
+  --install-extension /tmp/zaaack.markdown-editor-0.1.7.vsix \
+  --install-extension /tmp/hediet.vscode-drawio-1.4.0.vsix
 
 echo "INFO: all extensions install finished."
 
